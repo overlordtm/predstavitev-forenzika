@@ -21,7 +21,7 @@
             <!-- Slide 1: Title -->
             <section>
                 <h1>Digitalna forenzika</h1>
-                <p>uvod v orodja in tehnike</p>
+                <p>tehnike, orodja in triki in nasveti</p>
 
                 <p>Damjan Matičič, Andraž Vrhovec</p>
             </section>
@@ -278,7 +278,7 @@
                 </section>
 
                 <section>
-                    <h2>razna orodja, vredna omembe 1/2</h2>
+                    <h2>razna orodja, vredna omembe 1/3</h2>
                     <p class="r-fit-text">
                     <ul>
                         <li><a href="https://github.com/ReFirmLabs/binwalk">binwalk</a></li>
@@ -292,7 +292,7 @@
                 </section>
 
                 <section>
-                    <h2>razna orodja, vredna omembe, 2/2</h2>
+                    <h2>razna orodja, vredna omembe, 2/3</h2>
                     <p class="r-fit-text">
                     <ul>
                         <li><a gref="https://www.videolan.org/">vlc</a></li>
@@ -303,8 +303,130 @@
                     </ul>
                     </p>
                 </section>
+
+
+                <section>
+                    <h2>razna orodja, vredna omembe, 3/3</h2>
+                    <p class="r-fit-text">
+                    <ul>
+                        <li><a gref="https://any.run/">any.run</a></li>
+                        <li><a gref="https://www.virustotal.com/gui/">VirusTotal</a></li>
+                        <li><a gref="https://bazaar.abuse.ch/">MalwareBazaar</a></li>
+                        <li><a gref="https://otx.alienvault.com/dashboard/new">AlienVault OTX</a></li>
+                        <li><a gref="https://www.abuseipdb.com/">Abuse IPDB</a></li>
+                    </ul>
+                    </p>
+                </section>
             </section>
 
+            <section>
+                <section>
+                    <h2>Triki in nasveti</h2>
+                </section>
+                <section>
+                    <h2>Lokacije dnevniških zapisov - Windows</h2>
+
+                    <p class="r-fit-text">
+                    <dl>
+                        <dt>Event Viewer</dt>
+                        <dd>Primarna lokacija za dnevniške zapise sistema in aplikacij</dd>
+                        <dt>C:\Windows\System32\winevt\Logs</dt>
+                        <dd>Lokacija datotek (.evtx) za dnevniške zapise Windows</dd>
+                        <dt>%APPDATA%</dt>
+                        <dd>Veliko aplikacij ima svoje dnevniške zapise v mapi AppData v uporabnikovem domačem
+                            direktoriju</dd>
+                    </dl>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Lokacije dnevniških zapisov - MacOS</h2>
+
+                    <p class="r-fit-text">
+                    <dl>
+                        <dt>Console App</dt>
+                        <dd>Aplikacija, ki omogoca centralizirano ogledovanje dnevniških zapisov</dd>
+                        <dt>/var/log</dt>
+                        <dd>Glavna lokacija za dnevniške zapise</dd>
+                        <dt>~/Library/Logs</dt>
+                        <dd>Veliko aplikacij ima svoje dnevniške zapise v mapi AppData v uporabnikovem domačem
+                            direktoriju</dd>
+                    </dl>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Lokacije dnevniških zapisov - Linux</h2>
+
+                    <dl class="r-fit-text">
+                        <dt>/var/log</dt>
+                        <dd>Glavna lokacija za dnevniške zapise</dd>
+                        <dt>/var/log/{syslog,messages}</dt>
+                        <dd>Dnevniški zapisi sistema in jedra</dd>
+                        <dt>/var/log/auth.log</dt>
+                        <dd>Dnevniški zapisi povezani z avtentikacijo in avtorizacijo (poskusi prijave, sudo ukazi)</dd>
+                        <dt>/var/log/kern.log</dt>
+                        <dd>Sporočila jedra</dd>
+                        <dt>/var/log/{daemon,demon}.log</dt>
+                        <dd>Dnevniški zapisi sistemskih servisov</dd>
+                        <dt>/var/log/boot.log</dt>
+                        <dd>Dnevniški zapisi ustvarjeni ob zagonu</dd>
+                        <dt>/var/log/{apt,dpkg,yum}.log</dt>
+                        <dd>Dnevniški zapisi namestitev</dd>
+                    </dl>
+                </section>
+
+
+                <section>
+                    <h2>Dobro je vedeti</h2>
+
+                    <p class="r-fit-text">
+                        Rotacija dnevnika: Operacijski sistemi običajno izmenjujejo dnevniške datoteke, da preprečijo,
+                        da bi
+                        postale pretirano velike. Upoštevajte pravilnike o rotaciji dnevnikov in poskrbite, da boste
+                        zbrali
+                        vse ustrezne arhivirane dnevnike.
+                    </p>
+                    <p class="r-fit-text">
+                        Centralizirano beleženje: Mnogi sistemi posredujejo dnevnike centraliziranemu strežniku
+                        sistemskega dnevnika. Če je primerno, boste morda morali pridobiti tudi dnevnike s strežnika
+                        syslog.
+                    </p>
+                    <p class="r-fit-text">
+                        Protiforenzične tehnike: Napadalci lahko poskušajo počistiti ali spremeniti dnevniške datoteke,
+                        da
+                        bi prikrili svoje sledi. Iščite dokaze o posegu v dnevnik (neskladja v formatu, časovnih žigih v
+                        datoteki in tistih iz datotečnega sistema ...).
+                    </p>
+                    <p class="r-fit-text">
+                        Dovoljenja: Za dostop do določenih dnevniških datotek boste morda potrebovali skrbniške pravice.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>ADS - Alternate Data Streams - Windows</h2>
+                    <p class="r-fit-text"> V NTFS datotečnem sistemu lahko datoteke vsebujejo skrite podatkovne tokove.
+                        Preverite jih z orodji, kot je <a
+                            href="https://learn.microsoft.com/en-us/sysinternals/downloads/streams">streams.exe</a>.</p>
+                </section>
+
+
+                <section>
+                    <h2>Kaj narediti z neznano datoteko?</h2>
+
+                    <ol class="r-fit-text">
+                        <li>NE JE ZAGNATI, DVOKLIKNITI ali kaj podobnega (če je izvršljiva)</li>
+                        <li>Linux ukaz <code>file</code> vam morda pomaga identificiratin datoteko</li>
+                        <li>Izračunajte različne zgoščene vrednosti datoteke in jih pogooglajte, poglejte VirusTotal, MalwareBazaar ...</li>
+                        <li>Odprite jo v hex urejevalniku in poglejte glavo datoteke</li>
+                        <li>Uporabite strings-bstring da analizirate znakovne nize v datoteke, morda vam dajo kako idejo</li>
+                        <li>Uporabite binwalk da analizirate entropijo datoteke in prepoznbate morebitne vgrajene datoteke</li>
+                        <li>Zaženite jo v sandboxu (any.run, Cuckoo) in opayujte izvajanje</li>
+                    </ol>
+
+
+                </section>
+            </section>
 
             <!-- Slide: Q&A -->
             <section>
