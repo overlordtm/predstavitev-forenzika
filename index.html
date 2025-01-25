@@ -1,40 +1,335 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/solarized.css">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Slide 1: Title -->
+            <section>
+                <h1>Digitalna forenzika</h1>
+                <p>uvod v orodja in tehnike</p>
+
+                <p>Damjan Matičič, Andraž Vrhovec</p>
+            </section>
+
+            <section>
+                <section>
+                    <h1>Tehnike</h1>
+
+                    <ul>
+                        <li>Pridobivanje podatkov</li>
+                        <li>Analiza datotek in datotečnih sistemov</li>
+                        <li>Analiza dnevniških datotek</li>
+                        <li>Analiza omrežnega prometa</li>
+                        <li>Analiza zlonamerne programske opreme</li>
+                        <li>Analiza časovnice</li>
+                        <li>Poročanje</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Pridobivanje podatkov</h2>
+                    <p>Ključno pri forenzičnem pridobivanju podatkov je ohranjanje njihove integritete. Uporabljamo
+                        metode, kot so bitna kopija (identična kopija celotnega nosilca), logična kopija (kopiranje
+                        izbranih datotek) in živo pridobivanje (zajem podatkov iz delujočega sistema). Write-blockerji
+                        preprečujejo nenamerno spreminjanje originalnih podatkov, kar zagotavlja verodostojnost dokazov.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Analiza datotek in datotečnih sistemov</h2>
+
+                    <p>Razumevanje strukture datotečnih sistemov (NTFS, FAT32, ext4, APFS) je ključno za učinkovito
+                        analizo. Preiskujemo, kako se podatki shranjujejo, brišejo in obnavljajo. S forenzičnimi
+                        tehnikami odkrivamo skrite datoteke in mape ter analiziramo metapodatke (časovni žigi,
+                        avtorstvo), da rekonstruiramo dogajanje.</p>
+                </section>
+
+                <section>
+                    <h2>Analiza dnevniških datotek</h2>
+                    <p>Analiza dnevniških datotek (log files) je ključna za razumevanje aktivnosti v sistemu ali
+                        omrežju. Dnevniške datoteke beležijo dogodke, kot so prijave uporabnikov, dostop do datotek,
+                        sistemske napake in varnostna opozorila. Z analizo teh zapisov lahko rekonstruiramo zaporedje
+                        dogodkov, identificiramo anomalije in morebitne vdore ter pridobimo dokaze o zlonamernih
+                        aktivnostih. Različni sistemi in aplikacije ustvarjajo različne vrste dnevniških datotek, zato
+                        je pomembno razumeti njihovo strukturo in pomen posameznih zapisov.</p>
+                </section>
+
+                <section>
+                    <h2>Analiza omrežnega prometa</h2>
+
+                    <p>Analiza zajetega omrežnega prometa (protokoli TCP/IP, HTTP, DNS) omogoča identifikacijo sumljivih
+                        aktivnosti, rekonstrukcijo komunikacije in prenesenih datotek ter sledenje napadalcem.</p>
+                </section>
+
+                <section>
+                    <h2>Analiza zlonamerne programske opreme</h2>
+                    <p>Zlonamerna programska oprema (virusi, trojanci, ransomware) se analizira statično (pregled kode
+                        brez izvajanja) in dinamično (opazovanje vedenja med izvajanjem) za razumevanje njenega
+                        delovanja, namena in morebitnega izvora.</p>
+                </section>
+
+                <section>
+                    <h2>Analiza časovnice</h2>
+                    <p>Ustvarjanje časovnice dogodkov, pridobljenih iz različnih virov, nam omogoča rekonstrukcijo
+                        zaporedja aktivnosti in razumevanje poteka incidenta.</p>
+                </section>
+
+                <section>
+                    <h2>Poročanje</h2>
+                    <p>Jasno, jedrnato in dobro dokumentirano poročilo je ključnega pomena za predstavitev forenzičnih
+                        ugotovitev in dokazov na razumljiv način, ki je sprejemljiv tudi na sodišču.</p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Pregled orodji</h2>
+                    <p>
+                        Orodja za ...
+                    <ul class="r-fit-text">
+                        <li>zajem podatkov in diskovnih slik (Disk and Data Capture/Imaging)</li>
+                        <li>izrezovanje datotek (File carving)</li>
+                        <li>obnovo podatkov (Data Recovery Tools)</li>
+                        <li>analizo pomnilnika (Memory Forensics Tools)</li>
+                        <li>mobilno forenziko (Mobile forensics tools)</li>
+                        <li>omrežno forenziko (Network forensics tools)</li>
+                        <li>zbiranje in organizacijo podatkov in časovnic</li>
+                        <li>obratni inženiring</li>
+                        <li>dinamično analizo in debuggiranje</li>
+                    </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Orodja za zajem podatkov in diskovnih slik</h2>
+
+                    <p class="r-fit-text">Namen: Ustvarjanje bitnih kopij (forenzičnih slik) trdih diskov, SSD-jev, USB
+                        ključev in drugih nosilcev podatkov. Ohranjanje originalnih dokazov za analizo brez
+                        spreminjanja.</p>
+                    <p class="r-fit-text">Ključne lastnosti: Podpora za blokiranje zapisovanja, preverjanje zgoščevalnih
+                        funkcij (MD5, SHA-1, SHA-256), stiskanje slik, podpora za različne formate slik.</p>
+                    <p class="r-fit-text">
+                    <ul>
+                        <li><a href="https://www.exterro.com/digital-forensics-software/ftk-imager">FTK Imager</a></li>
+                        <li><a href="https://www.opentext.com/products/forensic">OpenText Forensic (ex EnCase
+                                Imager)</a></li>
+                        <li><a href="https://www.x-ways.net/imager/">X-Ways Imager</a></li>
+                        <li><a href="https://sourceforge.net/projects/dc3dd/">dd in dc3dd</a></li>
+                        <li><a href="https://guymager.sourceforge.io/">Guymager</a></li>
+                    </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Orodja za izrezovanje datotek</h2>
+                    <p class="r-fit-text">Namen: Obnavljanje izbrisanih ali fragmentiranih datotek iz nosilcev podatkov,
+                        tudi če metapodatki datotečnega sistema niso na voljo ali so poškodovani.</p>
+                    <p class="r-fit-text">Ključne lastnosti: Izrezovanje na podlagi podpisov, analiza glave/nogo
+                        datoteke, podpora za različne vrste datotek.</p>
+                    <p class="r-fit-text">
+                    <ul>
+                        <li><a href="https://foremost.sourceforge.net/">Foremost</a></li>
+                        <li><a href="https://www.cgsecurity.org/wiki/PhotoRec">PhotoRec</a></li>
+                        <li><a href="https://github.com/sleuthkit/scalpel">Scalpel</a></li>
+                    </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Orodja za obnovo podatkov</h2>
+                    <p class="r-fit-text">Namen: Obnovitev izgubljenih ali izbrisanih podatkov zaradi nenamernega
+                        brisanja, formatiranja ali drugih scenarijev izgube podatkov. Niso strogo forenzična orodja,
+                        vendar so lahko koristna pri nekaterih preiskavah.</p>
+                    <p class="r-fit-text">Ključne lastnosti: Algoritmi za obnovitev datotek, podpora za različne
+                        datotečne sisteme, obnovitev particij.</p>
+
+                    <p class="r-fit-text">
+                    <ul>
+                        <li><a href="https://www.ccleaner.com/recuva">Recuva</a></li>
+                        <li><a href="https://www.cgsecurity.org/wiki/TestDisk">TestDisk</a></li>
+                        <li><a href="https://dmde.com/">DMDE</a></li>
+                    </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Orodja za analizo pomnilnika</h2>
+                    <p class="r-fit-text">Namen: Analiza nestanovitnega pomnilnika (RAM) za pridobivanje dragocenih
+                        informacij, kot so delujoči procesi, omrežne povezave, prijavni podatki in šifrirni ključi.</p>
+                    <p class="r-fit-text">Ključne lastnosti: Zajem pomnilnika, analiza procesov, analiza zlonamerne
+                        programske opreme, izrezovanje podatkov iz pomnilnika.</p>
+
+                    <p class="r-fit-text">
+                    <ul>
+                        <li><a href="https://volatilityfoundation.org/">Volatility</a></li>
+                        <li><a href="https://www.windowsscope.com/">WindowsSCOPE</a></li>
+                        <li><a href="https://forensics.wiki/tools_memory_imaging/">WinPmem,
+                                LinPmem, OSXPmem ...</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Orodja za mobilno forenziko</h2>
+                    <p class="r-fit-text">Namen: Pridobivanje podatkov iz mobilnih naprav (pametnih telefonov, tablic),
+                        vključno z dnevniki klicev, SMS sporočili, stiki, podatki GPS, podatki aplikacij in izbrisanimi
+                        informacijami.</p>
+                    <p class="r-fit-text">Ključne lastnosti: Podpora za različne mobilne platforme (iOS, Android),
+                        pridobivanje in dekodiranje podatkov, obhod varnostnih mehanizmov (odvisno od predpisov in
+                        pravne oblasti).</p>
+
+                    <p class="r-fit-text">
+                    <ul>
+                        <li><a href="https://cellebrite.com/en/ufed/">Cellebrite UFED</a></li>
+                        <li><a href="https://docs.mvt.re/en/latest/">MVT - Mobile verification toolkit</a></li>
+                        <li><a href="https://github.com/den4uk/andriller">Andriller</a></li>
+                        <li><a href="https://github.com/MobSF/Mobile-Security-Framework-MobSF">MobSF</a></li>
+                    </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Orodja za omrežno forenizko</h2>
+                    <p class="r-fit-text">Namen: Zajemanje, analiziranje in interpretiranje omrežnega prometa za
+                        identifikacijo varnostnih incidentov, vdorov in zlonamernih dejavnosti.</p>
+                    <p class="r-fit-text">Ključne lastnosti: Zajem paketov, analiza protokolov, zaznavanje vdorov,
+                        analiza zlonamerne programske opreme.</p>
+
+                    <p class="r-fit-text">
+                    <ul>
+                        <li><a href="https://www.wireshark.org/">Wireshark</a></li>
+                        <li><a href="https://www.tcpdump.org/">tcpdump</a></li>
+                        <li><a href="https://www.netresec.com/?page=NetworkMiner">NetworkMiner</a></li>
+                        <li><a href="https://www.xplico.org/">Xplico</a></li>
+                    </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Orodja za zbiranje in organizacijo podatkov</h2>
+                    <p class="r-fit-text">Namen: Korelacija dogodkov iz različnih virov za ustvarjanje kronološkega
+                        pogleda na dejavnosti v sistemu ali omrežju. Pomaga razumeti zaporedje dogodkov med incidentom.
+                    </p>
+                    <p class="r-fit-text">Ključne lastnosti: Razčlenjevanje dogodkov iz različnih dnevniških datotek in
+                        artefaktov, vizualizacija časovnic.</p>
+
+                    <p class="r-fit-text">
+                    <ul>
+                        <li><a href="https://timesketch.org/">TimeSketch</a></li>
+                        <li><a href="https://github.com/TheHive-Project">TheHive Project</a></li>
+                        <li><a href="https://github.com/log2timeline/plaso">Plaso</a></li>
+                        <li><a href="https://www.maltego.com/">Maltego</a></li>
+                    </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Orodja za obratni inženiring</h2>
+
+                    <p class="r-fit-text">Namen: Analiza programske in strojne opreme, da se razume njeno delovanje,
+                        pogosto za odkrivanje zlonamerne programske opreme, ranljivosti ali skritih funkcij. Uporablja
+                        se lahko za razumevanje delovanja zlonamerne kode, identifikacijo avtorjev ali rekonstrukcijo
+                        dogodkov.</p>
+                    <p class="r-fit-text">Ključne lastnosti: Razstavljanje kode, debuggiranje, analiza kontrolnega toka,
+                        dekompilacija (kjer je mogoče), prepoznavanje knjižnic in API klicev.</p>
+
+                    <p class="r-fit-text">
+                    <ul>
+                        <li><a href="https://hex-rays.com/ida-free">IDA Free/Pro</a></li>
+                        <li><a href="https://ghidra-sre.org/">Ghidra</a></li>
+                        <li><a href="https://www.radare.org/n/">redare2</a></li>
+                        <li><a href="https://www.hopperapp.com/">Hopper</a></li>
+                        <li><a href="https://github.com/skylot/jadx">jadx</a></li>
+                    </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Orodja za dinamično analizo in debuggiranje</h2>
+
+                    <p class="r-fit-text">Namen: Analiza vedenja programa med izvajanjem, omogoča spremljanje izvajanja
+                        kode, spreminjanje vrednosti v pomnilniku in preusmerjanje poteka programa. Uporablja se za
+                        razumevanje delovanja programa, iskanje ranljivosti in analizo zlonamerne programske opreme.</p>
+                    <p class="r-fit-text">Ključne lastnosti: Nastavljanje breakpoint-ov, spremljanje registrov,
+                        pregledovanje pomnilnika, manipulacija s programom med izvajanjem, hooking API klicev.</p>
+
+                    <p class="r-fit-text">
+                    <ul>
+                        <li><a href="https://frida.re/">Frida</a></li>
+                        <li><a href="https://x64dbg.com/">x64dbg</a></li>
+                        <li><a href="https://github.com/dnSpy/dnSpy">dnSpy</a></li>
+
+                    </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>razna orodja, vredna omembe 1/2</h2>
+                    <p class="r-fit-text">
+                    <ul>
+                        <li><a href="https://github.com/ReFirmLabs/binwalk">binwalk</a></li>
+                        <li><a href="https://www.gnu.org/software/binutils/">objdump</a></li>
+                        <li><a href="https://exiftool.org/">exiftool</a></li>
+                        <li><a href="https://www.winitor.com/download">pestudio</a></li>
+                        <li><a href="https://www.autopsy.com/">autopsy</a></li>
+                        <li><a gref="https://github.com/simsong/bulk_extractor">bulk_extractor</a></li>
+                    </ul>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>razna orodja, vredna omembe, 2/2</h2>
+                    <p class="r-fit-text">
+                    <ul>
+                        <li><a gref="https://www.videolan.org/">vlc</a></li>
+                        <li><a gref="https://ffmpeg.org/ffprobe.html">ffprobe</a></li>
+                        <li><a href="https://wiki.gnome.org/Apps/Ghex">Ghex</a></li>
+                        <li><a href="https://freehexeditorneo.com/">neo</a></li>
+                        <li><a href="https://cyberchef.org/">cyberchef</a></li>
+                    </ul>
+                    </p>
+                </section>
+            </section>
+
+
+            <!-- Slide: Q&A -->
+            <section>
+                <h2>Q&A</h2>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+            slideNumber: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
 </html>
