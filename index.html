@@ -417,15 +417,34 @@
                     <ol class="r-fit-text">
                         <li>NE JE ZAGNATI, DVOKLIKNITI ali kaj podobnega (če je izvršljiva)</li>
                         <li>Linux ukaz <code>file</code> vam morda pomaga identificiratin datoteko</li>
-                        <li>Izračunajte različne zgoščene vrednosti datoteke in jih pogooglajte, poglejte VirusTotal, MalwareBazaar ...</li>
+                        <li>Izračunajte različne zgoščene vrednosti datoteke in jih pogooglajte, poglejte VirusTotal,
+                            MalwareBazaar ...</li>
                         <li>Odprite jo v hex urejevalniku in poglejte glavo datoteke</li>
-                        <li>Uporabite strings-bstring da analizirate znakovne nize v datoteke, morda vam dajo kako idejo</li>
-                        <li>Uporabite binwalk da analizirate entropijo datoteke in prepoznbate morebitne vgrajene datoteke</li>
+                        <li>Uporabite strings/bstring da analizirate znakovne nize v datoteke, morda vam dajo kako idejo
+                        </li>
+                        <li>Uporabite binwalk da analizirate entropijo datoteke in prepoznbate morebitne vgrajene
+                            datoteke</li>
                         <li>Zaženite jo v sandboxu (any.run, Cuckoo) in opayujte izvajanje</li>
                     </ol>
 
 
                 </section>
+
+
+                <section>
+                    <h2>Začasne datoteke</h2>
+
+                    <p class="r-fit-text">V mapah kamor sistem shranjuje začasne datoteke se velikokrat najdejo sledi
+                        napada</p>
+
+                    <dl class="r-fit-text">
+                        <dt>Windows</dt><dd><code>%TEMP%</code>, <code>%TMP%</code>, <code>C:\Windows\Temp</code>, <code>%LOCALAPPDATA%\Microsoft\Windows\INetCache</code>, <code>C:\Windows\Prefetch</code></dd>
+                        <dt>MacOS</dt><dd><code>/private/var/folders/*/[random_characters]/T/</code>, <code>/var/tmp</code>, <code>/tmp</code></dd>
+                        <dt>Linux</dt><dd><code>/tmp</code>, <code>/var/tmp</code>, <code>$XDG_RUNTIME_DIR</code>, <code>/run/tmp</code></dd>
+                    </dl>
+                </section>
+
+
             </section>
 
             <!-- Slide: Q&A -->
