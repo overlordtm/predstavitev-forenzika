@@ -3,3 +3,5 @@ disks/images/*
 disks/mnt
 
 *.out
+
+memory/*.img
