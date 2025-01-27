@@ -1,0 +1,5 @@
+!disks/images/.gitkeep
+disks/images/*
+disks/mnt
+
+*.out
