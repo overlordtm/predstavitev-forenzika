@@ -21,9 +21,9 @@
             <!-- Slide 1: Title -->
             <section>
                 <h1>Digitalna forenzika</h1>
-                <p>tehnike, orodja in triki in nasveti</p>
 
                 <p>Damjan Matičič, Andraž Vrhovec</p>
+                <p>27. 1. 2025</p>
             </section>
 
             <section>
@@ -180,6 +180,7 @@
                         <li><a href="https://www.windowsscope.com/">WindowsSCOPE</a></li>
                         <li><a href="https://forensics.wiki/tools_memory_imaging/">WinPmem,
                                 LinPmem, OSXPmem ...</a></li>
+                        <li><a href="https://github.com/504ensicsLabs/LiME">LiME</a></li>
                     </ul>
                 </section>
 
@@ -439,9 +440,16 @@
                         napada</p>
 
                     <dl class="r-fit-text">
-                        <dt>Windows</dt><dd><code>%TEMP%</code>, <code>%TMP%</code>, <code>C:\Windows\Temp</code>, <code>%LOCALAPPDATA%\Microsoft\Windows\INetCache</code>, <code>C:\Windows\Prefetch</code></dd>
-                        <dt>MacOS</dt><dd><code>/private/var/folders/*/[random_characters]/T/</code>, <code>/var/tmp</code>, <code>/tmp</code></dd>
-                        <dt>Linux</dt><dd><code>/tmp</code>, <code>/var/tmp</code>, <code>$XDG_RUNTIME_DIR</code>, <code>/run/tmp</code></dd>
+                        <dt>Windows</dt>
+                        <dd><code>%TEMP%</code>, <code>%TMP%</code>, <code>C:\Windows\Temp</code>,
+                            <code>%LOCALAPPDATA%\Microsoft\Windows\INetCache</code>, <code>C:\Windows\Prefetch</code>
+                        </dd>
+                        <dt>MacOS</dt>
+                        <dd><code>/private/var/folders/*/[random_characters]/T/</code>, <code>/var/tmp</code>,
+                            <code>/tmp</code></dd>
+                        <dt>Linux</dt>
+                        <dd><code>/tmp</code>, <code>/var/tmp</code>, <code>$XDG_RUNTIME_DIR</code>,
+                            <code>/run/tmp</code></dd>
                     </dl>
                 </section>
 
