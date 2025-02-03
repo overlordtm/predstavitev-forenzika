@@ -9,6 +9,10 @@ Primeri se nahajajo po mapah, vsaka mapa ima svoj Readme.
 
 Naloge se nahajajo tu: https://k00.fr/26l974jb
 
+Geslo za 7z: `blueteam`
+
+Resitve na: `ls25 AFNA koofr.net`
+
 
 Vsaka naloga vsebuje `README.md` s kratkim opisom in vprašanji in pricakovanimi formati odgovora.
 
