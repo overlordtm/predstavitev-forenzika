@@ -7,23 +7,6 @@ Primeri se nahajajo po mapah, vsaka mapa ima svoj Readme.
 
 ## Izziv
 
-Naloge se nahajajo tu: https://k00.fr/26l974jb
+Naloge za uvrstitev v ekipo LS25 Forenzika bodo predvidoma na voljo 27.2, vsi prijavljeni boste obveščeni tudi po e-mailu.
 
-Geslo za 7z: `blueteam`
-
-Resitve na: `ls25 AFNA koofr.net`
-
-
-Vsaka naloga vsebuje `README.md` s kratkim opisom in vprašanji in pricakovanimi formati odgovora.
-
-
-| Naloga | Stevilo vprasanj | Tock na pravilni odgovor  | Tezavnost | 
-| ---- | ---------| -----------| ---------- | 
-| FOR100 | 8 | 0.5          | Zelo lahko | 
-| FOR101 | 8 | 0.5          | Zelo lahko |
-| FOR200 | 10 | 1      | Lahko | 
-| FOR201 | 8 | 1      | Lahko |
-| FOR300 | 15 | 1.5 | Srednje |
-| FOR301 | 13 | 1.5 | Srednje |
-| FOR400 |  13  | 2 | Tezko |
-| FOR401 | 13 | 2 | Tezko |
+Naloge iz prej objavljenega sklopa lahko uporabite za pripravo.
