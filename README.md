@@ -9,4 +9,4 @@ Primeri se nahajajo po mapah, vsaka mapa ima svoj Readme.
 
 Naloge za uvrstitev v ekipo LS25 Forenzika bodo predvidoma na voljo 27.2, vsi prijavljeni boste obveščeni tudi po e-mailu.
 
-Naloge iz prej objavljenega sklopa lahko uporabite za pripravo.
+[Naloge](https://k00.fr/sf8rq591) iz prej objavljenega sklopa lahko uporabite za pripravo (geslo je `blueteam`).
